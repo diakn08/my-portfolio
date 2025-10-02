@@ -60,7 +60,7 @@ header ul {
 .hero-text h1 {
   font-size: 3em;
   color: #a3c4f3;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 .btn {
@@ -175,4 +175,37 @@ button {
   color: #111;
   font-weight: bold;
   cursor: pointer;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5em;
+}
+
+.contact-list li {
+  margin-bottom: 0.8em;
+}
+
+
+footer {
+  text-align: center;
+  padding: 2em;
+  background: #111;
+  color: #eee;
+  margin-top: 3em;
+}
+
+.social-icons {
+  margin-top: 1em;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 32px;
+  color: #a3c4f3; 
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff; 
 }
