@@ -12,16 +12,21 @@ lang="en">
 <body>
 
     <header>
-        <h2 class="logo">Diana</h2>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <a href="https://github.com/diakn08" class="github">GitHub</a>
-    </header>
+  <h2 class="logo">Portfolio</h2>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <a href="https://github.com/diakn08" class="github">GitHub</a>
+
+  <div class="burger" id="burger">☰</div>
+</header>
+
 
    
     <section class="hero">
@@ -98,11 +103,11 @@ lang="en">
         <h2>Contact Me</h2>
         <p>I would love to hear about your project and how I can help. 
         Please fill in the form, and I’ll get back to you as soon as possible.</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш Email">
+            <textarea name="message" placeholder="Ваше сообщение"></textarea>
+            <button type="submit">Отправить</button>
         </form>
     </section>
 
@@ -130,6 +135,16 @@ lang="en">
     <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
   </div>
 </footer>
+<script src="js/tg.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
 
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
