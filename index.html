@@ -1,300 +1,134 @@
-/* BASE */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #eee;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Diana's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
-a {
-  color: #eee;
-  text-decoration: none;
-}
+<body>
 
-h1, h2, h3 {
-  margin: 0.5em 0;
-}
+  <!-- HEADER -->
+  <header>
+    <h2 class="logo">Portfolio</h2>
 
-h2 {
-  color: #a3c4f3;
-  text-transform: uppercase;
-}
+    <nav>
+      <ul id="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 2em;
-  background: #111;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    <a href="https://github.com/diakn08" class="github">GitHub</a>
+    <div class="burger" id="burger">☰</div>
+  </header>
 
-header ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5em;
-}
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p>Hello, I'm Diana</p>
+      <h1>Full Stack <br> Developer</h1>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+    <div class="hero-img">
+      <img src="img/Myfoto.jpg" alt="My photo">
+    </div>
+  </section>
 
-.github {
-  border: 1px solid #eee;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Kadyrova Diana Ulanbekovna, 17 years old, from Kyrgyzstan 🇰🇬<br>
+      I'm a budding full-stack programmer, second-year student at IT and Business College, MUA University 📚<br>
+      Currently interested in mobile development.</p>
 
-.github:hover {
-  background: #eee;
-  color: #111;
-}
+    <div class="about-cards">
+      <div class="about-card">
+        <h3>Experience</h3>
+        <p>2+ years learning Java development</p>
+        <p>Participated in projects and hackathons as a volunteer</p>
+        <p>Experience with backend APIs and databases</p>
+      </div>
+      <div class="about-card">
+        <h3>Hard Skills</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Java, JavaFx, a little bit Python</li>
+          <li>Spring Boot</li>
+          <li>SQL & NoSQL Databases</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Teamwork & Collaboration</li>
+          <li>Problem-solving</li>
+          <li>Communication</li>
+          <li>Determination</li>
+          <li>Time Management</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-.burger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: #a3c4f3;
-}
+  <!-- WORK -->
+  <section id="work" class="work">
+    <h2>Work</h2>
+    <p>Here are some of my recent projects.</p>
+    <div class="projects">
+      <div class="card">
+        <img src="img/Myproject.png" alt="Project">
+        <p>Image Processor <br> JavaFx</p>
+      </div>
+      <div class="card">
+        <img src="img/Myproject2.png" alt="Project">
+        <p>Gallows <br> Java</p>
+      </div>
+    </div>
+  </section>
 
-/* HERO */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4em 8%;
-  gap: 3em;
-  flex-wrap: wrap;
-}
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Please fill in the form, and I’ll get back to you as soon as possible.</p>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="email" placeholder="Ваш Email" required>
+      <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
 
-.hero-text h1 {
-  font-size: clamp(2em, 5vw, 3em);
-  color: #a3c4f3;
-}
+    <h2>Social Media</h2>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:dikadyrova2008@gmail.com">dikadyrova2008@gmail.com</a></li>
+      <li><strong>Number:</strong> <a href="tel:+996554882498">+996 554 88 24 98</a></li>
+    </ul>
+  </section>
 
-.hero-text p {
-  font-size: clamp(1em, 2vw, 1.2em);
-}
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Diana | Portfolio</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/dia.lkn_" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/dialkn" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
 
-.btn {
-  display: inline-block;
-  margin-top: 1em;
-  padding: 0.7em 1.2em;
-  background: #a3c4f3;
-  color: #111;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
+  <script src="js/script.js"></script>
+  <script>
+    const burger = document.getElementById('burger');
+    const navList = document.getElementById('nav-list');
 
-.btn:hover {
-  transform: translateY(-2px);
-}
+    burger.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+  </script>
 
-.hero-img img {
-  width: clamp(220px, 40vw, 320px);
-  height: clamp(220px, 40vw, 320px);
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #a3c4f3;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.6);
-}
-
-/* ABOUT */
-.about {
-  padding: 3em 8%;
-  text-align: center;
-}
-
-.about-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 2em;
-  flex-wrap: wrap;
-  margin-top: 2em;
-}
-
-.about-card {
-  flex: 1;
-  min-width: 250px;
-  background: #222;
-  padding: 2em;
-  border-radius: 10px;
-  text-align: left;
-}
-
-.about-card h3 {
-  color: #a3c4f3;
-  margin-bottom: 1em;
-}
-
-.about-card ul {
-  padding-left: 1.2em;
-}
-
-/* WORK */
-.work {
-  padding: 3em 8%;
-  text-align: center;
-}
-
-.projects {
-  display: flex;
-  gap: 2em;
-  margin-top: 2em;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  background: #222;
-  padding: 1em;
-  border-radius: 10px;
-  text-align: center;
-  flex: 1;
-  min-width: 250px;
-  max-width: 350px;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-/* CONTACT */
-.contact {
-  padding: 3em 8%;
-  text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-input, textarea, button {
-  padding: 0.8em;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-button {
-  background: #a3c4f3;
-  color: #111;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background: #8ab4f0;
-  transform: translateY(-2px);
-}
-
-.contact-list {
-  list-style: none;
-  margin-top: 1.5em;
-}
-
-.contact-list li {
-  margin-bottom: 0.8em;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 2em;
-  background: #111;
-}
-
-.social-icons {
-  margin-top: 1em;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  font-size: 32px;
-  color: #a3c4f3;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: #fff;
-}
-
-/* ===== ADAPTIVE ===== */
-@media (max-width: 1024px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-img img {
-    width: 250px;
-    height: 250px;
-  }
-  .about-cards, .projects {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  header ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #111;
-    border: 1px solid #333;
-    border-radius: 10px;
-    padding: 1.2em;
-  }
-
-  header ul.active {
-    display: flex;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  .hero {
-    flex-direction: column-reverse;
-  }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .about-cards, .projects {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 2.5em;
-  }
-
-  .hero-text p {
-    font-size: 1.2em;
-  }
-
-  .btn {
-    font-size: 1.1em;
-    padding: 1em 1.6em;
-  }
-}
+</body>
+</html>
