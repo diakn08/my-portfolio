@@ -1,4 +1,4 @@
-/* BASE */
+/* BASE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -139,6 +139,30 @@ header ul {
   padding-left: 1.2em;
 }
 
+.about-language {
+  background: #222;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 2em auto; /* ставит блок строго по центру */
+  text-align: left;
+}
+
+.about-language ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-language li {
+  padding: 0.5em 0;
+  font-size: 1.1em;
+  border-bottom: 1px solid #333;
+}
+
+.about-language li:last-child {
+  border-bottom: none;
+}
+
 /* WORK */
 .work {
   padding: 3em 8%;
@@ -234,6 +258,8 @@ footer {
 }
 
 /* ===== ADAPTIVE ===== */
+
+/* Планшеты и маленькие ноутбуки */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
@@ -249,6 +275,7 @@ footer {
   }
 }
 
+/* Планшеты и большие телефоны */
 @media (max-width: 768px) {
   header ul {
     display: none;
@@ -260,6 +287,7 @@ footer {
     border: 1px solid #333;
     border-radius: 10px;
     padding: 1.2em;
+    transition: all 0.3s ease;
   }
 
   header ul.active {
@@ -282,19 +310,47 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+  form {
+    width: 90%;
+    max-width: none;
+  }
 }
 
+/* Малые телефоны */
 @media (max-width: 480px) {
   .hero-text h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .hero-text p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .btn {
-    font-size: 1.1em;
-    padding: 1em 1.6em;
+    font-size: 0.95em;
+    padding: 0.7em 1.2em;
+  }
+
+  .hero-img img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-card {
+    padding: 1em;
+  }
+
+  .card {
+    max-width: 95%;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin: 0 6px;
+  }
+
+  .contact-list li {
+    font-size: 0.9em;
   }
 }
