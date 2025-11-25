@@ -1,202 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Diana's Portfolio </title>
+    <title>Diana Kadyrova | Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-  <h2 class="logo">Portfolio</h2>
-
-  <nav id="nav">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#language">Language</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <a href="https://github.com/diakn08" class="github">GitHub</a>
-
-  <div class="burger" id="burger">☰</div>
-</header>
-
-<section class="hero">
-    <div class="hero-text">
-        <p>Hello, I'm Diana</p>
-        <h1>Full stack <br> Developer</h1>
-        <a href="#contact" class="btn">Contact Me</a>
-    </div>
-    <div class="hero-img">
-        <img src="img/Myfoto.jpg" alt="My photo">
-    </div>
-</section>
-
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <p>Kadyrova Diana Ulanbekovna, 17 years old, from Kyrgyzstan 🇰🇬 <br>
-    I'm a budding full-stack programmer, a second-year student at the IT and Business College at MUA University 📚 <br>
-    Learning and developing my skills, and I'm currently interested in mobile development and frontend.</p>
-
-    <div class="about-cards">
-
-        <div class="about-card">
-            <h3> Experience </h3>
-            <p>2 years learning Java development</p>
-            <p>I was a volunteer and participated in many projects and hackathons. One of them is Startup Nation, </p>
-            <p>Experience with backend APIs and databases</p>
-            <p>Currently learning React and Flutter </p>
-        </div>
-
-        <div class="about-card">
-            <h3> Certificates</h3>
-            <p>2 years learning Java development</p>
-            <p>I was a volunteer and participated in many projects and hackathons. One of them is Startup Nation, </p>
-            <p>Experience with backend APIs and databases</p>
-            <p>Currently learning React and Flutter </p>
-        </div>
-
-        <div class="about-card">
-            <h3> Hard Skills </h3>
+    <header>
+        <h2 class="logo">Portfolio</h2>
+        <nav id="nav">
             <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Java, JavaFx, a little bit Python</li>
-                <li>Spring Boot</li>
-                <li>SQL & NoSQL Databases</li>
-                <li>Git & GitHub</li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#extracurricular">Activities</a></li>
+                <li><a href="#language">Language</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+        </nav>
+        <div class="header-buttons">
+            <button id="themeToggle" class="theme-btn" title="Toggle theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button id="languageToggle" class="language-btn" title="Toggle language">
+                <i class="fas fa-globe"></i>
+            </button>
+            <a href="https://github.com/diakn08" class="github">GitHub</a>
         </div>
-
-        <div class="about-card">
-            <h3> Soft Skills  </h3>
-            <ul>
-                <li>Teamwork & Collaboration</li>
-                <li>Problem-solving</li>
-                <li>Communication</li>
-                <li>Determination</li>
-                <li>Time Management</li>
-            </ul>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+    </header>
 
-    </div>
-</section>
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
-<!-- ✅ EDUCATION SECTION (новая часть) -->
-<section id="education" class="about">
-  <h2>Education</h2>
-  <p>Here is some information about my education.</p>
-
-  <div class="about-cards">
-
-    <div class="about-card">
-      <h3>School</h3>
-      <p>I graduated from school №69, studied there until the 9th grade with excellent grades, and went to college.</p>
-    </div>
-
-    <div class="about-card">
-      <h3>College</h3>
-      <p>IT and Business College at MUA University</p>
-      <p>2nd year student, specializing in programming</p>
-    </div>
-
-    <div class="about-card">
-      <h3>Additional Learning</h3>
-      <p>Participating in hackathons, online courses, and self-study in development</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- LANGUAGE SECTION -->
-<section id="language" class="about">
-  <h2>Languages</h2>
-  <p>Here are some information about the languages I know.</p>
-
-  <div class="about-language">
-    <ul>
-      <li>Kyrgyz – Native</li>
-      <li>Russian – C1/Fluent</li>
-      <li>English – B2/Fluent</li>
-      <li>German – A1/Currently studying</li>
-    </ul>
-  </div>
-</section>
-
-
-<!-- WORK -->
-<section id="work" class="work">
-    <h2>Work</h2>
-    <p>Here are some of my recent projects.</p>
-    <div class="projects">
-        <div class="card">
-            <img src="img/Landing page.png" alt="Project">
-            <p>Landing page <br> HTML, CSS, JS </p>
-            <p>This is a project that I had to repeat but with my own design .🫡</p>
+    <section class="hero">
+        <div class="hero-text">
+            <p class="hello-text" data-i18n="hello">Hello, I'm Diana</p>
+            <h1><span data-i18n="fullstack">Full Stack</span> <span class="highlight" data-i18n="developer">Developer</span></h1>
+            <p class="hero-description" data-i18n="hero_desc">Passionate about creating beautiful and functional applications</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary" data-i18n="contact_me">Contact Me</a>
+                <a href="#work" class="btn btn-secondary" data-i18n="view_work">View My Work</a>
+            </div>
         </div>
-        <div class="card">
-            <img src="img/Myproject2.png" alt="Project">
-            <p>Gallows <br> Java </p>
+        <div class="hero-img">
+            <div class="image-container">
+                <img src="img/DianaKa.png" alt="Diana Kadyrova" class="profile-photo">
+                <div class="placeholder-img" style="display: none;">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote">
+        <div class="container">
+            <div class="quote-content">
+                <p class="quote-text" data-i18n="quote_text">"You don't have to be great to start, but you have to start to be great"</p>
+                <p class="quote-author" data-i18n="quote_author">- Diana Kadyrova</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="about_me">About Me</h2>
+                <p data-i18n="about_desc">Kadyrova Diana Ulanbekovna, 17 years old, from Kyrgyzstan 🇰🇬</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description" data-i18n="about_text1">I am a beginner full-stack programmer, a second-year student at the IT and Business College at MUA University, faculty SCA-24C (Computer Software and Systems Automation). I am studying and developing my skills, and am currently interested in mobile development and front-end development. In the future, I hope to find my niche, but for now, I am trying everything.</p>
+                    <p class="about-description" data-i18n="about_text2">I strive to develop as a specialist and as a person, and I enjoy working in a team and self-development. With 2 years of experience in Java development and participation in various hackathons including Startup Nation, I've developed strong problem-solving skills and the ability to work effectively in teams.</p>
+                    <p class="about-description" data-i18n="about_text3">Interesting facts about me: In my free time, I enjoy reading books and am interested in psychology. I studied public speaking, SMM, and speed reading, and was a member of a discussion club where I completed 12 training courses, including ones on Agile and Scrum. During my school years, I was interested in acting and played leading roles in works by Ch. Aitmatov. I took second place in regional competitions, did gymnastics for three years, and, like everyone else, I love watching TV series and analyzing them.</p>
+                </div>
+            </div>
+            <div class="about-cards">
+                <div class="card about-card">
+                    <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3 data-i18n="experience">Experience</h3>
+                    <ul>
+                        <li data-i18n="exp1">2 years learning Java development</li>
+                        <li data-i18n="exp2">Volunteer in projects and hackathons</li>
+                        <li data-i18n="exp3">Experience with backend APIs and databases</li>
+                        <li data-i18n="exp4">Currently learning React and Flutter</li>
+                    </ul>
+                </div>
+                <div class="card about-card">
+                    <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                    <h3 data-i18n="certificates">Certificates</h3>
+                    <ul>
+                        <li data-i18n="cert1">Java Programming Certificate</li>
+                        <li data-i18n="cert2">Web Development Fundamentals</li>
+                        <li data-i18n="cert3">Startup Nation Hackathon Participant</li>
+                        <li data-i18n="cert4">TIFE Certificate</li>
+                    </ul>
+                </div>
+                <div class="card about-card">
+                    <div class="card-icon"><i class="fas fa-code"></i></div>
+                    <h3 data-i18n="hard_skills">Hard Skills</h3>
+                    <ul>
+                        <li data-i18n="skill1">HTML, CSS, JavaScript</li>
+                        <li data-i18n="skill2">Java, JavaFx, Python basics</li>
+                        <li data-i18n="skill3">Spring Boot</li>
+                        <li data-i18n="skill4">SQL & NoSQL Databases</li>
+                    </ul>
+                </div>
+                <div class="card about-card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h3 data-i18n="soft_skills">Soft Skills</h3>
+                    <ul>
+                        <li data-i18n="soft1">Teamwork & Collaboration</li>
+                        <li data-i18n="soft2">Problem-solving</li>
+                        <li data-i18n="soft3">Communication</li>
+                        <li data-i18n="soft4">Time Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Остальные секции остаются без изменений -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="tools_title">Tools & Technologies</h2>
+                <p data-i18n="tools_desc">Technologies and tools I use to bring ideas to life</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-item"><div class="tool-icon"><i class="fab fa-html5"></i></div><div class="tool-name">HTML5</div></div>
+                <div class="tool-item"><div class="tool-icon"><i class="fab fa-css3-alt"></i></div><div class="tool-name">CSS3</div></div>
+                <div class="tool-item"><div class="tool-icon"><i class="fab fa-js"></i></div><div class="tool-name">JavaScript</div></div>
+                <div class="tool-item"><div class="tool-icon"><i class="fab fa-java"></i></div><div class="tool-name">Java</div></div>
+                <div class="tool-item"><div class="tool-icon"><i class="fas fa-database"></i></div><div class="tool-name">SQL</div></div>
+                <div class="tool-item"><div class="tool-icon"><i class="fab fa-git-alt"></i></div><div class="tool-name">Git</div></div>
+                <div class="tool-item"><div class="tool-icon"><i class="fab fa-github"></i></div><div class="tool-name">GitHub</div></div>
+                <div class="tool-item"><div class="tool-icon"><i class="fas fa-leaf"></i></div><div class="tool-name">Spring Boot</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="education">Education</h2>
+                <p data-i18n="education_desc">My educational journey in technology</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2014-2023</div>
+                    <div class="timeline-content card">
+                        <h3 data-i18n="school_title">School #69</h3>
+                        <p data-i18n="school_desc">I graduated from school №69, studied there until the 9th grade with excellent grades, and went to college.</p>
+                        <a href="https://69.edubish.kg/ru/" class="school-link" target="_blank">
+                            <span data-i18n="visit_school">Visit School Website</span> <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024-Present</div>
+                    <div class="timeline-content card">
+                        <h3 data-i18n="college_title">IT and Business College at MUA University</h3>
+                        <p data-i18n="college_desc">2nd year student, specializing in programming. Learning software development, database management, and web technologies.</p>
+                        <a href="https://college.alatoo.edu.kg/en/main" class="school-link" target="_blank">
+                            <span data-i18n="visit_college">Visit College Website</span> <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="extracurricular" class="extracurricular">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="extracurricular_title">Extracurricular Activities</h2>
+                <p data-i18n="extracurricular_desc">My participation in clubs, volunteer work, and projects</p>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card card">
+                    <div class="activity-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 data-i18n="debate_club">AUCA Debate Club</h3>
+                    <p data-i18n="debate_desc">Member of the debate club, developing public speaking and critical thinking skills.</p>
+                    <a href="https://www.instagram.com/auca_dc/?hl=ru" class="activity-link" target="_blank">
+                        <span data-i18n="view_profile">View Instagram</span> <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="activity-card card">
+                    <div class="activity-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 data-i18n="volunteer_leadership">Leadership Academy Volunteer</h3>
+                    <p data-i18n="leadership_desc">Volunteer at Leadership Academy, contributing to youth development programs.</p>
+                    <a href="https://www.instagram.com/leadershipkg/?hl=ru" class="activity-link" target="_blank">
+                        <span data-i18n="view_profile">View Instagram</span> <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="activity-card card">
+                    <div class="activity-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 data-i18n="hospice_volunteer">First Children's Hospice Volunteer</h3>
+                    <p data-i18n="hospice_desc">Volunteer at the first children's hospice, providing support and assistance.</p>
+                    <a href="https://hospice.kg/" class="activity-link" target="_blank">
+                        <span data-i18n="visit_website">Visit Website</span> <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="activity-card card">
+                    <div class="activity-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 data-i18n="tife_project">TIFE Project Finalist</h3>
+                    <p data-i18n="tife_desc">Finalist of the TIFE project at AUCA, participating in innovative educational initiatives.</p>
+                    <a href="https://www.instagram.com/tife.auca/" class="activity-link" target="_blank">
+                        <span data-i18n="view_profile">View Instagram</span> <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="activity-card card">
+                    <div class="activity-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 data-i18n="startup_hackathon">Startup Nation Hackathon</h3>
+                    <p data-i18n="startup_desc">Participated in Startup Nation hackathon with a project idea for Kyrgyz Test platform.</p>
+                    <a href="https://www.instagram.com/startupnation.asia/" class="activity-link" target="_blank">
+                        <span data-i18n="view_profile">View Instagram</span> <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="activity-card card">
+                    <div class="activity-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 data-i18n="conference">International Conference</h3>
+                    <p data-i18n="conference_desc">Participant in International Student Conference "Trends and Perspectives of Education Development in Digitalization".</p>
+                    <a href="#conference" class="activity-link">
+                        <span data-i18n="learn_more">Learn More</span> <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="language" class="language">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="languages">Languages</h2>
+                <p data-i18n="languages_desc">Languages I speak and write</p>
+            </div>
+            <div class="language-list">
+                <div class="language-item">
+                    <div class="language-flag">🇰🇬</div>
+                    <div class="language-name" data-i18n="kyrgyz">Kyrgyz</div>
+                    <div class="language-level" data-i18n="native">Native</div>
+                    <div class="language-bar">
+                        <div class="language-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-flag">🇷🇺</div>
+                    <div class="language-name" data-i18n="russian">Russian</div>
+                    <div class="language-level" data-i18n="fluent">C1/Fluent</div>
+                    <div class="language-bar">
+                        <div class="language-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-flag">🇺🇸</div>
+                    <div class="language-name" data-i18n="english">English</div>
+                    <div class="language-level" data-i18n="fluent_b2">B2/Fluent</div>
+                    <div class="language-bar">
+                        <div class="language-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-flag">🇹🇷</div>
+                    <div class="language-name" data-i18n="turkish">Turkish</div>
+                    <div class="language-level" data-i18n="basic">A1/Basic</div>
+                    <div class="language-bar">
+                        <div class="language-progress" style="width: 30%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work">
+    <div class="container">
+        <div class="section-title">
+            <h2 data-i18n="projects">My Projects</h2>
+            <p data-i18n="projects_desc">Some of my recent work and personal projects</p>
+        </div>
+        <div class="projects">
+            <!-- Project 1: Landing Page -->
+            <a href="https://github.com/diakn08" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="img/Landing page.png" alt="Landing Page Project" class="project-photo">
+                </div>
+                <div class="project-content">
+                    <h3 class="project1-title" data-i18n="landing_page">Landing Page</h3>
+                    <p class="project-tech">HTML, CSS, JavaScript</p>
+                    <p class="project1-description" data-i18n="project1_desc">Responsive landing page with modern design and smooth animations.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 2: Gallows Game -->
+            <a href="https://github.com/diakn08" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="img/Myproject2.png" alt="Gallows Game" class="project-photo">
+                </div>
+                <div class="project-content">
+                    <h3 class="project2-title" data-i18n="gallows_game">Gallows Game</h3>
+                    <p class="project-tech">Java, JavaFX</p>
+                    <p class="project2-description" data-i18n="project2_desc">Classic word guessing game with graphical interface.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">Game</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 3: Photo Editor -->
+            <a href="https://github.com/diakn08/MyPhotoEditorDiana" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="img/Myproject.png" alt="Photo Editor" class="project-photo">
+                </div>
+                <div class="project-content">
+                    <h3 class="project3-title">Photo Editor</h3>
+                    <p class="project-tech">Java, JavaFX</p>
+                    <p class="project3-description">Image editing application with various filters and tools.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">Image Processing</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 4: Portfolio Website -->
+            <a href="https://github.com/diakn08" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="img/portfolio-website.jpg" alt="Portfolio Website" class="project-photo">
+                    <div class="coming-soon-overlay">
+                        <div class="coming-soon-text">
+                            <i class="fas fa-code"></i>
+                            <h3 data-i18n="coming_soon">More Projects Coming Soon</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project4-title" data-i18n="portfolio_site">Portfolio Website</h3>
+                    <p class="project-tech">HTML, CSS, JavaScript</p>
+                    <p class="project4-description" data-i18n="project3_desc">This responsive portfolio website.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>I would love to hear about your project and how I can help. 
-    Please fill in the form, and I’ll get back to you as soon as possible.</p>
-    <form id="contactForm">
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="email" name="email" placeholder="Ваш Email">
-        <textarea name="message" placeholder="Ваше сообщение"></textarea>
-        <button type="submit">Отправить</button>
-    </form>
-</section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="contact">Contact Me</h2>
+                <p data-i18n="contact_desc">I would love to hear about your project and how I can help.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 data-i18n="get_in_touch">Get In Touch</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <strong data-i18n="email">Email</strong>
+                            <a href="mailto:dikadyrova2008@gmail.com">dikadyrova2008@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <strong data-i18n="phone">Phone</strong>
+                            <a href="tel:+996554882498">+996 554 88 24 98</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <strong data-i18n="location">Location</strong>
+                            <span data-i18n="kyrgyzstan">Kyrgyzstan</span>
+                        </div>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-i18n="your_name">Your Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="your_email">Your Email *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="your_message">Your Message *</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="send_message">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<section class="contact">
-  <h2>SM</h2>
-  <p>If you have any questions or want to contact me directly</p>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Diana Kadyrova</h3>
+                    <p data-i18n="footer_desc">Full Stack Developer passionate about creating amazing digital experiences.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://t.me/dialkn" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://github.com/diakn08" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/dia.lkn_" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© <span id="year"></span> Diana Kadyrova | Portfolio</p>
+            </div>
+        </div>
+    </footer>
 
-  <ul class="contact-list">
-    <li><strong>Email:</strong> 
-      <a href="mailto:dikadyrova2008@gmail.com">dikadyrova2008@gmail.com</a>
-    </li>
-
-    <li><strong>Number:</strong> 
-      <a href="tel:+996554882498">+996 554 88 24 98</a>
-    </li>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  </ul>
-</section>
-
-<footer>
-  <p>© 2025 Diana | Portfolio </p>
-  <div class="social-icons">
-    <a href="https://www.instagram.com/dia.lkn_" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://t.me/dialkn" target="_blank"><i class="fab fa-telegram"></i></a>
-    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-  </div>
-</footer>
-
-<script src="js/tg.js"></script>
-<script src="js/script.js"></script>
-
-<script>
-  const burger = document.getElementById('burger');
-  const nav = document.getElementById('nav');
-
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
-
+    <script src="js/script.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/tg.js"></script>
 </body>
 </html>
