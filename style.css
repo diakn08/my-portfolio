@@ -1214,144 +1214,123 @@ footer {
         font-size: 1.4rem;
     }
 }
+    
+    /* ===== HERO SECTION FIX FOR MOBILE ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rem 8% 5rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    /* Добавляем отступ сверху равный высоте хедера */
+    padding-top: calc(100px + 5rem);
+}
+
+/* Уменьшаем отступ для мобильных устройств */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: calc(80px + 3rem);
+        min-height: auto;
+        padding-bottom: 3rem;
+    }
+}
 
 @media (max-width: 480px) {
-    section {
-        padding: 3rem 4%;
+    .hero {
+        padding-top: calc(70px + 2rem);
+        padding-bottom: 2rem;
+    }
+}
+
+/* ===== HEADER HEIGHT FIX ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8%;
+    background: var(--header-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: all 0.3s ease;
+    /* Фиксируем высоту хедера */
+    height: 80px;
+}
+
+/* Адаптивная высота хедера для мобильных */
+@media (max-width: 768px) {
+    header {
+        height: 70px;
+        padding: 1rem 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 65px;
+        padding: 0.8rem 4%;
+    }
+}
+
+/* ===== BETTER MOBILE LAYOUT FOR HERO ===== */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+        padding: calc(70px + 2rem) 5% 2rem;
     }
     
-    .hero {
-        padding: 6rem 4% 2rem;
+    .hero-text {
+        margin-top: 0;
     }
     
     .hero-text h1 {
         font-size: 2.2rem;
+        margin: 1rem 0 1.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 1em 1.5em;
     }
     
     .profile-photo, .placeholder-img {
         width: 200px;
         height: 200px;
     }
-    
-    .about-text p {
-        text-align: justify;
-        font-size: 0.95rem;
-    }
-    
-    .tools-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 0.8rem;
-    }
-    
-    .tool-item {
-        padding: 0.8rem;
-    }
-    
-    .tool-icon {
-        font-size: 1.8rem;
-    }
-    
-    .tool-name {
-        font-size: 0.9rem;
-    }
-    
-    .timeline-year {
-        position: static;
-        width: auto;
-        text-align: left;
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: var(--primary);
-    }
-    
-    .timeline-item {
-        padding-left: 25px;
-        padding-top: 20px;
-    }
-    
-    .timeline::after {
-        left: 20px;
-    }
-    
-    .activities-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .activity-card {
-        padding: 1.2rem;
-    }
-    
-    .activity-icon {
-        font-size: 2.2rem;
-        width: 60px;
-        height: 60px;
-    }
-    
-    .project-image {
-        height: 160px;
-    }
-    
-    .project-content {
-        padding: 1rem;
-    }
-    
-    .project-title {
-        font-size: 1.2rem;
-    }
-    
-    .project-tags {
-        margin-top: auto;
-        padding-top: 0.8rem;
-    }
-    
-    .tag {
-        padding: 0.3em 0.7em;
-        font-size: 0.7rem;
-    }
-    
-    .contact-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-    
-    .contact-icon {
-        width: auto;
-    }
-    
-    .social-icons a {
-        margin: 0 10px;
-        font-size: 1.5rem;
-    }
-    
-    .quote {
-        padding: 3rem 4%;
-    }
-    
-    .quote-text {
-        font-size: 1.2rem;
-    }
-    
-    .header-right {
-        gap: 0.8rem;
-    }
-    
-    .header-buttons {
-        gap: 0.8rem;
-    }
-    
-    .theme-btn, .language-btn {
-        width: 40px;
-        height: 40px;
-        padding: 0.4rem;
-        font-size: 0.9rem;
-    }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
+    .hero {
+        padding: calc(65px + 1.5rem) 4% 1.5rem;
+        gap: 1.5rem;
+    }
+    
     .hero-text h1 {
         font-size: 1.8rem;
+        margin: 0.8rem 0 1.2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
     }
     
     .profile-photo, .placeholder-img {
@@ -1359,11 +1338,28 @@ footer {
         height: 180px;
     }
     
-    .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .hero-buttons {
+        gap: 0.8rem;
     }
-    
-    .project-tags {
-        justify-content: center;
+}
+
+/* ===== ADDITIONAL SPACING FOR OTHER SECTIONS ===== */
+/* Добавляем отступы для всех секций чтобы не перекрывались хедером */
+section {
+    padding: 5rem 8%;
+    /* Добавляем скролл-маргин для якорных ссылок */
+    scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        scroll-margin-top: 65px;
+        padding: 3rem 4%;
     }
 }
