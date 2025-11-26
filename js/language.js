@@ -1,5 +1,4 @@
 // ===== СИСТЕМА СМЕНЫ ЯЗЫКА =====
-// ===== СИСТЕМА СМЕНЫ ЯЗЫКА =====
 const translations = {
     en: {
         // Hero Section
@@ -30,21 +29,28 @@ const translations = {
         
         "certificates": "Certificates",
         "cert1": "Java Programming Certificate",
-        "cert2": "Web Development Fundamentals",
+        "cert2": "Programming course certificate",
         "cert3": "Startup Nation Hackathon Participant",
         "cert4": "TIFE Certificate",
+        "cert5": "Public speaking, SMM Certificates",
+        "cert6": "Speed reading, gymnastics, and acting Certificates",
         
         "hard_skills": "Hard Skills",
         "skill1": "HTML, CSS, JavaScript",
         "skill2": "Java, JavaFx, Python basics",
-        "skill3": "Spring Boot",
+        "skill3": "Spring Boot basics",
         "skill4": "SQL & NoSQL Databases",
+        "skill5": "React and Flutter learning",
         
         "soft_skills": "Soft Skills",
         "soft1": "Teamwork & Collaboration",
         "soft2": "Problem-solving",
         "soft3": "Communication",
         "soft4": "Time Management",
+        "soft5": "Empathetic",
+        "soft6": "Creative",
+        "soft7": "MBTI - ENTJ",
+        "soft8": "Goal-oriented",
         
         // Tools
         "tools_title": "Tools & Technologies",
@@ -91,7 +97,7 @@ const translations = {
         "fluent_b2": "B2/Fluent",
         "basic": "A1/Basic",
 
-        // Projects - FIXED KEYS
+        // Projects
         "projects": "My Projects",
         "projects_desc": "Some of my recent work and personal projects",
         "landing_page": "Landing Page",
@@ -150,21 +156,28 @@ const translations = {
         
         "certificates": "Сертификаты",
         "cert1": "Сертификат по программированию на Java",
-        "cert2": "Основы веб-разработки",
+        "cert2": "Сертификат курса программирования",
         "cert3": "Участник хакатона Startup Nation",
         "cert4": "Сертификат TIFE",
+        "cert5": "Сертификаты по ораторскому искусству, SMM",
+        "cert6": "Сертификаты по скорочтению, гимнастике и актерскому мастерству",
         
         "hard_skills": "Технические навыки",
         "skill1": "HTML, CSS, JavaScript",
         "skill2": "Java, JavaFx, основы Python",
-        "skill3": "Spring Boot",
+        "skill3": "Основы Spring Boot",
         "skill4": "SQL & NoSQL базы данных",
+        "skill5": "Изучаю React и Flutter",
         
         "soft_skills": "Гибкие навыки",
         "soft1": "Командная работа",
         "soft2": "Решение проблем",
         "soft3": "Коммуникация",
         "soft4": "Тайм-менеджмент",
+        "soft5": "Эмпатия",
+        "soft6": "Креативность",
+        "soft7": "MBTI - ENTJ",
+        "soft8": "Целеустремленность",
         
         // Tools
         "tools_title": "Инструменты и технологии",
@@ -211,7 +224,7 @@ const translations = {
         "fluent_b2": "B2/Свободно",
         "basic": "A1/Базовый",
         
-        // Projects - FIXED KEYS
+        // Projects
         "projects": "Мои проекты",
         "projects_desc": "Некоторые из моих последних работ и личных проектов",
         "landing_page": "Лендинг Пейдж",
