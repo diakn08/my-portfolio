@@ -1,4 +1,5 @@
 // ===== СИСТЕМА СМЕНЫ ЯЗЫКА =====
+// ===== СИСТЕМА СМЕНЫ ЯЗЫКА =====
 const translations = {
     en: {
         // Hero Section
@@ -90,13 +91,9 @@ const translations = {
         "fluent_b2": "B2/Fluent",
         "basic": "A1/Basic",
 
-        // Projects
+        // Projects - FIXED KEYS
         "projects": "My Projects",
         "projects_desc": "Some of my recent work and personal projects",
-        "project1_title": "Landing Page Project",
-        "project2_title": "Gallows Game",
-        "project3_title": "Photo Editor",
-        "project4_title": "Portfolio Website",
         "landing_page": "Landing Page",
         "gallows_game": "Gallows Game",
         "photo_editor": "Photo Editor",
@@ -106,7 +103,6 @@ const translations = {
         "project3_desc": "Image editing application with various filters and tools.",
         "project4_desc": "This responsive portfolio website built with modern technologies.",
         "coming_soon": "More Projects Coming Soon",
-        
         
         // Contact
         "contact": "Contact Me",
@@ -215,12 +211,9 @@ const translations = {
         "fluent_b2": "B2/Свободно",
         "basic": "A1/Базовый",
         
-       "projects": "Мои проекты",
+        // Projects - FIXED KEYS
+        "projects": "Мои проекты",
         "projects_desc": "Некоторые из моих последних работ и личных проектов",
-        "project1_title": "Лендинг Пейдж",
-        "project2_title": "Игра Виселица",
-        "project3_title": "Фоторедактор",
-        "project4_title": "Сайт-портфолио",
         "landing_page": "Лендинг Пейдж",
         "gallows_game": "Игра Виселица",
         "photo_editor": "Фоторедактор",
