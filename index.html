@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diana Kadyrova | Full Stack Developer</title>
+    <!-- ПРОСТОЙ FAVICON БЕЗ MANIFEST -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
     <header>
         <h2 class="logo">Portfolio</h2>
         <nav id="nav">
@@ -304,7 +306,7 @@
         </div>
     </section>
 
-    <section id="work" class="work">
+   <section id="work" class="work">
     <div class="container">
         <div class="section-title">
             <h2 data-i18n="projects">My Projects</h2>
@@ -314,29 +316,98 @@
             <!-- Project 1: Landing Page -->
             <a href="https://github.com/diakn08/Landing-page" target="_blank" class="project-card">
                 <div class="project-image">
-                    <img src="img/Landing page.png" alt="Landing Page Project" class="project-photo">
+                    <img src="img/Landing page.png" alt="Landing Page Project" class="project-photo" loading="lazy">
+                    <div class="project-type-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
                 </div>
                 <div class="project-content">
-                    <h3 class="project1-title" data-i18n="landing_page">Landing Page</h3>
+                    <h3 class="project-title" data-i18n="landing_page">Landing Page</h3>
                     <p class="project-tech">HTML, CSS, JavaScript</p>
-                    <p class="project1-description" data-i18n="project1_desc">Responsive landing page with modern design and smooth animations.</p>
+                    <p class="project-description" data-i18n="project1_desc">Responsive landing page with modern design and smooth animations.</p>
                     <div class="project-tags">
                         <span class="tag">HTML</span>
                         <span class="tag">CSS</span>
-                        <span class="tag">JS</span>
+                        <span class="tag">JavaScript</span>
                     </div>
                 </div>
             </a>
 
-            <!-- Project 2: Gallows Game -->
-            <a href="https://github.com/diakn08/Gallows-game/tree/main" target="_blank" class="project-card">
+            <!-- Project 2: Movies App -->
+            <a href="https://github.com/diakn08/Movies-app" target="_blank" class="project-card">
                 <div class="project-image">
-                    <img src="img/Myproject2.png" alt="Gallows Game" class="project-photo">
+                    <img src="img/WeatherApp.png" alt="Movies App" class="project-photo" loading="lazy">
+                    <div class="project-type-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
                 </div>
                 <div class="project-content">
-                    <h3 class="project2-title" data-i18n="gallows_game">Gallows Game</h3>
+                    <h3 class="project-title" data-i18n="movies_app">Movies App</h3>
+                    <p class="project-tech">HTML, CSS, JavaScript, API</p>
+                    <p class="project-description" data-i18n="movies_desc">Web application that allows users to search for movies and view detailed information using external API.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 3: Currency Converter -->
+            <a href="https://github.com/diakn08/Currency-converter" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="img/CurrencyConverter.png" alt="Currency Converter" class="project-photo" loading="lazy">
+                    <div class="project-type-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" data-i18n="currency_converter">Currency Converter</h3>
+                    <p class="project-tech">HTML, CSS, JavaScript, API</p>
+                    <p class="project-description" data-i18n="currency_desc">Web application for converting amounts between different currencies using real-time exchange rates.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 4: Weather App -->
+            <a href="https://github.com/diakn08/Weather-App-" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="img/MoviesApp.png" alt="Weather App" class="project-photo" loading="lazy">
+                    <div class="project-type-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" data-i18n="weather_app">Weather App</h3>
+                    <p class="project-tech">HTML, CSS, JavaScript, API</p>
+                    <p class="project-description" data-i18n="weather_desc">Web application that provides current weather information for any city using external API.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 5: Gallows Game -->
+            <a href="https://github.com/diakn08/Gallows-game/tree/main" target="_blank" class="project-card">
+                <div class="project-image">
+                    <img src="img/Myproject2.png" alt="Gallows Game" class="project-photo" loading="lazy">
+                    <div class="project-type-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" data-i18n="gallows_game">Gallows Game</h3>
                     <p class="project-tech">Java, JavaFX</p>
-                    <p class="project2-description" data-i18n="project2_desc">Classic word guessing game with graphical interface.</p>
+                    <p class="project-description" data-i18n="project2_desc">Classic word guessing game with graphical interface.</p>
                     <div class="project-tags">
                         <span class="tag">Java</span>
                         <span class="tag">JavaFX</span>
@@ -345,15 +416,18 @@
                 </div>
             </a>
 
-            <!-- Project 3: Photo Editor -->
+            <!-- Project 6: Photo Editor -->
             <a href="https://github.com/diakn08/MyPhotoEditorDiana" target="_blank" class="project-card">
                 <div class="project-image">
-                    <img src="img/Myproject.png" alt="Photo Editor" class="project-photo">
+                    <img src="img/Myproject.png" alt="Photo Editor" class="project-photo" loading="lazy">
+                    <div class="project-type-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
                 </div>
                 <div class="project-content">
-                    <h3 class="project3-title">Photo Editor</h3>
+                    <h3 class="project-title" data-i18n="photo_editor">Photo Editor</h3>
                     <p class="project-tech">Java, JavaFX</p>
-                    <p class="project3-description">Image editing application with various filters and tools.</p>
+                    <p class="project-description" data-i18n="project3_desc">Image editing application with various filters and tools.</p>
                     <div class="project-tags">
                         <span class="tag">Java</span>
                         <span class="tag">JavaFX</span>
@@ -362,25 +436,28 @@
                 </div>
             </a>
 
-            <!-- Project 4: Portfolio Website -->
+            <!-- Project 7: Portfolio Website -->
             <a href="https://github.com/diakn08/my-portfolio" target="_blank" class="project-card">
                 <div class="project-image">
-                    <img src="img/portfolio.png" alt="Portfolio Website" class="project-photo">
+                    <img src="img/portfolio.png" alt="Portfolio Website" class="project-photo" loading="lazy">
                     <div class="coming-soon-overlay">
                         <div class="coming-soon-text">
                             <i class="fas fa-code"></i>
                             <h3 data-i18n="coming_soon">More Projects Coming Soon</h3>
                         </div>
                     </div>
+                    <div class="project-type-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                 </div>
                 <div class="project-content">
-                    <h3 class="project4-title" data-i18n="portfolio_site">Portfolio Website</h3>
+                    <h3 class="project-title" data-i18n="portfolio_site">Portfolio Website</h3>
                     <p class="project-tech">HTML, CSS, JavaScript</p>
-                    <p class="project4-description" data-i18n="project3_desc">This responsive portfolio website.</p>
+                    <p class="project-description" data-i18n="project4_desc">This responsive portfolio website built with modern technologies.</p>
                     <div class="project-tags">
                         <span class="tag">HTML</span>
                         <span class="tag">CSS</span>
-                        <span class="tag">JS</span>
+                        <span class="tag">JavaScript</span>
                     </div>
                 </div>
             </a>

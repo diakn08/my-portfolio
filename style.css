@@ -148,6 +148,7 @@ header {
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 20px var(--shadow);
     transition: all 0.3s ease;
+    height: 80px;
 }
 
 .logo {
@@ -290,6 +291,7 @@ nav a:hover::after {
     gap: 3rem;
     flex-wrap: wrap;
     min-height: 100vh;
+    padding-top: calc(100px + 5rem);
 }
 
 .hero-text {
@@ -702,13 +704,15 @@ nav a:hover::after {
     width: 100%;
     height: 200px;
     overflow: hidden;
+    background: var(--dark-light);
+    border-bottom: 1px solid var(--dark-lighter);
 }
 
 .project-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .project-card:hover .project-photo {
@@ -764,6 +768,7 @@ nav a:hover::after {
     margin-bottom: 0.5rem;
     color: var(--primary);
     font-weight: 600;
+    line-height: 1.4;
 }
 
 .project-tech {
@@ -778,6 +783,7 @@ nav a:hover::after {
     margin-bottom: 1.5rem;
     line-height: 1.5;
     flex-grow: 1;
+    font-size: 0.95rem;
 }
 
 .project-tags {
@@ -798,6 +804,7 @@ nav a:hover::after {
     font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid transparent;
+    display: inline-block;
 }
 
 .tag:hover {
@@ -823,11 +830,32 @@ nav a:hover::after {
 }
 
 .project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(2) { animation-delay: 0.15s; }
+.project-card:nth-child(3) { animation-delay: 0.2s; }
+.project-card:nth-child(4) { animation-delay: 0.25s; }
+.project-card:nth-child(5) { animation-delay: 0.3s; }
+.project-card:nth-child(6) { animation-delay: 0.35s; }
+.project-card:nth-child(7) { animation-delay: 0.4s; }
 
-/* ===== CONTACT ===== */
+/* ===== ИКОНКИ ДЛЯ ТИПОВ ПРОЕКТОВ ===== */
+.project-type-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+/* ===== КОНТАКТЫ ===== */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -981,33 +1009,23 @@ textarea:focus {
     transform: translateY(-2px);
 }
 
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    padding: 3rem 8%;
-    background: var(--dark);
+/* ===== АДАПТИВНАЯ СЕТКА ДЛЯ ПРОЕКТОВ ===== */
+@media (min-width: 1200px) {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-.social-icons {
-    margin: 1.5rem 0;
+@media (min-width: 992px) and (max-width: 1199px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.social-icons a {
-    display: inline-block;
-    margin: 0 15px;
-    font-size: 1.8rem;
-    color: var(--primary);
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: var(--text);
-    transform: translateY(-5px);
-}
-
-.copyright {
-    color: var(--text-light);
-    font-size: 0.9rem;
+@media (min-width: 768px) and (max-width: 991px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -1047,6 +1065,7 @@ footer {
 @media (max-width: 768px) {
     header {
         padding: 1rem 5%;
+        height: 70px;
     }
     
     nav ul {
@@ -1097,7 +1116,7 @@ footer {
         flex-direction: column-reverse;
         text-align: center;
         gap: 2rem;
-        padding: 7rem 5% 2rem;
+        padding: calc(70px + 2rem) 5% 2rem;
     }
     
     .hero-text {
@@ -1137,29 +1156,6 @@ footer {
         font-size: 2rem;
     }
     
-    .timeline::after {
-        left: 30px;
-    }
-    
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-    
-    .timeline-year {
-        position: absolute;
-        left: -70px;
-        width: 60px;
-        text-align: right;
-        font-weight: bold;
-        color: var(--primary);
-    }
-    
     .activities-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1191,6 +1187,7 @@ footer {
     
     .project-content {
         padding: 1.2rem;
+        height: calc(100% - 180px);
     }
     
     .project-image {
@@ -1205,6 +1202,14 @@ footer {
     .tag {
         padding: 0.35em 0.8em;
         font-size: 0.75rem;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
     }
     
     .contact-container {
@@ -1228,61 +1233,9 @@ footer {
     .quote-text {
         font-size: 1.4rem;
     }
-}
     
-    /* ===== HERO SECTION FIX FOR MOBILE ===== */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10rem 8% 5rem;
-    gap: 3rem;
-    flex-wrap: wrap;
-    min-height: 100vh;
-    /* Добавляем отступ сверху равный высоте хедера */
-    padding-top: calc(100px + 5rem);
-}
-
-/* Уменьшаем отступ для мобильных устройств */
-@media (max-width: 768px) {
-    .hero {
-        padding-top: calc(80px + 3rem);
-        min-height: auto;
-        padding-bottom: 3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding-top: calc(70px + 2rem);
-        padding-bottom: 2rem;
-    }
-}
-
-/* ===== HEADER HEIGHT FIX ===== */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 8%;
-    background: var(--header-bg);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 5px 20px var(--shadow);
-    transition: all 0.3s ease;
-    /* Фиксируем высоту хедера */
-    height: 80px;
-}
-
-/* Адаптивная высота хедера для мобильных */
-@media (max-width: 768px) {
-    header {
-        height: 70px;
-        padding: 1rem 5%;
+    section {
+        scroll-margin-top: 70px;
     }
 }
 
@@ -1291,49 +1244,7 @@ header {
         height: 65px;
         padding: 0.8rem 4%;
     }
-}
-
-/* ===== BETTER MOBILE LAYOUT FOR HERO ===== */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 2rem;
-        padding: calc(70px + 2rem) 5% 2rem;
-    }
     
-    .hero-text {
-        margin-top: 0;
-    }
-    
-    .hero-text h1 {
-        font-size: 2.2rem;
-        margin: 1rem 0 1.5rem;
-    }
-    
-    .hero-text p {
-        font-size: 1.1rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-    
-    .btn {
-        width: 100%;
-        text-align: center;
-        padding: 1em 1.5em;
-    }
-    
-    .profile-photo, .placeholder-img {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-@media (max-width: 480px) {
     .hero {
         padding: calc(65px + 1.5rem) 4% 1.5rem;
         gap: 1.5rem;
@@ -1356,25 +1267,30 @@ header {
     .hero-buttons {
         gap: 0.8rem;
     }
-}
-
-/* ===== ADDITIONAL SPACING FOR OTHER SECTIONS ===== */
-/* Добавляем отступы для всех секций чтобы не перекрывались хедером */
-section {
-    padding: 5rem 8%;
-    /* Добавляем скролл-маргин для якорных ссылок */
-    scroll-margin-top: 80px;
-}
-
-@media (max-width: 768px) {
-    section {
-        scroll-margin-top: 70px;
-    }
-}
-
-@media (max-width: 480px) {
+    
     section {
         scroll-margin-top: 65px;
         padding: 3rem 4%;
     }
+    
+    .contact-info,
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .social-contact a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* ===== ЛЕНИВАЯ ЗАГРУЗКА ИЗОБРАЖЕНИЙ ===== */
+.project-photo[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-photo.loaded {
+    opacity: 1;
 }

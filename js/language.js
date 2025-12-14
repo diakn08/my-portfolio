@@ -101,10 +101,16 @@ const translations = {
         "projects": "My Projects",
         "projects_desc": "Some of my recent work and personal projects",
         "landing_page": "Landing Page",
+        "movies_app": "Movies App",
+        "currency_converter": "Currency Converter",
+        "weather_app": "Weather App",
         "gallows_game": "Gallows Game",
         "photo_editor": "Photo Editor",
         "portfolio_site": "Portfolio Website",
         "project1_desc": "Responsive landing page with modern design and smooth animations.",
+        "movies_desc": "Web application that allows users to search for movies and view detailed information using external API.",
+        "currency_desc": "Web application for converting amounts between different currencies using real-time exchange rates.",
+        "weather_desc": "Web application that provides current weather information for any city using external API.",
         "project2_desc": "Classic word guessing game with graphical interface.",
         "project3_desc": "Image editing application with various filters and tools.",
         "project4_desc": "This responsive portfolio website built with modern technologies.",
@@ -121,10 +127,7 @@ const translations = {
         "your_name": "Your Name *",
         "your_email": "Your Email *",
         "your_message": "Your Message *",
-        "send_message": "Send Message",
-        
-        // Footer
-        "footer_desc": "Full Stack Developer passionate about creating amazing digital experiences."
+        "send_message": "Send Message"
     },
     
     ru: {
@@ -228,10 +231,16 @@ const translations = {
         "projects": "Мои проекты",
         "projects_desc": "Некоторые из моих последних работ и личных проектов",
         "landing_page": "Лендинг Пейдж",
+        "movies_app": "Приложение Фильмы",
+        "currency_converter": "Конвертер Валют",
+        "weather_app": "Приложение Погода",
         "gallows_game": "Игра Виселица",
         "photo_editor": "Фоторедактор",
         "portfolio_site": "Сайт-портфолио",
         "project1_desc": "Адаптивная посадочная страница с современным дизайном и плавными анимациями.",
+        "movies_desc": "Веб-приложение для поиска фильмов и просмотра подробной информации с использованием внешнего API.",
+        "currency_desc": "Веб-приложение для конвертации сумм между различными валютами с использованием реальных обменных курсов.",
+        "weather_desc": "Веб-приложение, предоставляющее текущую информацию о погоде для любого города с использованием внешнего API.",
         "project2_desc": "Классическая игра в угадывание слов с графическим интерфейсом.",
         "project3_desc": "Приложение для редактирования изображений с различными фильтрами и инструментами.",
         "project4_desc": "Этот адаптивный сайт-портфолио, созданный с использованием современных технологий.",
@@ -248,10 +257,7 @@ const translations = {
         "your_name": "Ваше имя *",
         "your_email": "Ваш email *",
         "your_message": "Ваше сообщение *",
-        "send_message": "Отправить сообщение",
-        
-        // Footer
-        "footer_desc": "Full Stack разработчик, увлеченный созданием удивительных цифровых впечатлений."
+        "send_message": "Отправить сообщение"
     }
 };
 

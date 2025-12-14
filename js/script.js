@@ -124,14 +124,6 @@ function initSmoothScroll() {
     });
 }
 
-// ===== ГОД В ФУТЕРЕ =====
-function setCurrentYear() {
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-}
-
 // ===== ФОРМА ОБРАТНОЙ СВЯЗИ =====
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
@@ -227,6 +219,28 @@ function showNotification(message, type = 'success') {
     }, 5000);
 }
 
+// ===== ЛЕНИВАЯ ЗАГРУЗКА ИЗОБРАЖЕНИЙ ПРОЕКТОВ =====
+function initLazyLoading() {
+    const images = document.querySelectorAll('.project-photo[loading="lazy"]');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '50px 0px',
+        threshold: 0.1
+    });
+    
+    images.forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
 // ===== ЗАПУСК ВСЕХ ФУНКЦИЙ =====
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 DOM загружен, запускаем функции...');
@@ -236,8 +250,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initScrollToTop();
     initSmoothScroll();
-    setCurrentYear();
     initContactForm();
+    initLazyLoading();
     
     console.log('✅ Все функции инициализированы!');
 });
@@ -249,6 +263,5 @@ window.checkElements = function() {
     console.log('burger:', document.getElementById('burger'));
     console.log('nav:', document.getElementById('nav'));
     console.log('scrollToTop:', document.getElementById('scrollToTop'));
-    console.log('year:', document.getElementById('year'));
     console.log('Текущая тема:', document.documentElement.getAttribute('data-theme'));
 };
