@@ -119,6 +119,8 @@ Portfolio/
 
 └─ settings.json # Настройки редактора
 
+---
+
 
 git clone https://github.com/diakn08/myportfolio.git
 
